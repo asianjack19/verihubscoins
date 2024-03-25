@@ -1,0 +1,5 @@
+venv/
+.env
+verihubscoins.db
+__pycache__/
+.vscode/
