@@ -7,6 +7,7 @@ endpoints of the application by using JWT token.
 How to run the application:
 1. Clone the repository
 2. Run the following commands:
+    - create a .env file in the root directory and add the "SECRET_KEY" variable
     - python -m venv venv to create a virtual environment for the project
     - source venv/Scripts/activate => (windows) to activate the virtual environment    
     - pip install -r requirements.txt to install all the dependencies
