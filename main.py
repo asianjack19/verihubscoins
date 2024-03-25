@@ -28,17 +28,17 @@ def check_blacklist(db: Session, token: str):
     return blacklisted_token
 # ====================
 
-@app.get("/protected/")
-def protected_route(token: str = Depends(oauth2_scheme)):
-    db = SessionLocal()
-    blacklisted_token = db.query(models.BlacklistedToken).filter(models.BlacklistedToken.token == token).first()
-    db.close()
+# @app.get("/protected/")
+# def protected_route(token: str = Depends(oauth2_scheme)):
+#     db = SessionLocal()
+#     blacklisted_token = db.query(models.BlacklistedToken).filter(models.BlacklistedToken.token == token).first()
+#     db.close()
 
-    if blacklisted_token:
-        return JSONResponse(status_code=401, content={"error": "You have been signed out"})
+#     if blacklisted_token:
+#         return JSONResponse(status_code=401, content={"error": "You have been signed out"})
 
-    token_data = verify_token(token)
-    return {"message": "You are logged in", "email": token_data.email}
+#     token_data = verify_token(token)
+#     return {"message": "You are logged in", "email": token_data.email}
 
 
 @app.post("/login")

@@ -1,0 +1,15 @@
+VERIHUBSCOINS
+
+Verihubscoins is an application that allows users to track all existing coins, add it to the tracked list, and also delete it from the tracked list.
+Upon registration, the user first will be asked to enter information such as email, password, and password confirmation. Then, registered users can log in and access the main
+endpoints of the application by using JWT token.
+
+How to run the application:
+1. Clone the repository
+2. Run the following commands:
+    - python -m venv venv to create a virtual environment for the project
+    - source venv/Scripts/activate => (windows) to activate the virtual environment    
+    - pip install -r requirements.txt to install all the dependencies
+    - uvicorn main:app --reload to run the application
+3. Open the browser and go to http://localhost:8000/docs to access the Swagger documentation
+![alt text](image.png)
